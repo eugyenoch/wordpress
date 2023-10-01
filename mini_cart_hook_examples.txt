@@ -1,0 +1,15 @@
+//These are the six hooks WooCommerce have published for the mini cart
+
+woocommerce_before_mini_cart
+woocommerce_before_mini_cart_contents
+woocommerce_mini_cart_contents
+woocommerce_widget_shopping_cart_total
+woocommerce_widget_shopping_cart_before_buttons
+woocommerce_widget_shopping_cart_after_buttons
+
+//Here is an example is how to use one
+function action_woocommerce_before_mini_cart() {
+    echo "This will appear at the very top of the mini cart";
+};
+
+add_action( 'woocommerce_before_mini_cart', 'action_woocommerce_before_mini_cart', 10, 0 );
