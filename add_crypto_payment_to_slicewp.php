@@ -2,7 +2,7 @@ function slicewp_custom_register_affiliate_fields_crypto_details( $fields ) {
 	
 	$fields[] = array(
 		'type'  	  		  => 'heading',
-		'default_value'		  => __( 'Cryptocurrency Payment Details; both USDC and USDT are for the Binance Smart Chain (BSC) Blockchain', 'slicewp' ),
+		'default_value'		  => __( 'Cryptocurrency Payment Details; USDC and USDT are for the Binance Smart Chain (BSC) Blockchain', 'slicewp' ),
 		'output_conditionals' => array( 'form' => array( 'affiliate_registration', 'affiliate_account' ) )
 	);
 
