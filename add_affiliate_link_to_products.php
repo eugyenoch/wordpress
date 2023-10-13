@@ -7,7 +7,7 @@ function slicewp_custom_add_afflink() {
 		
 		$referal_link = slicewp_get_affiliate_url( slicewp_get_current_affiliate_id(), get_permalink() );
 		
-		echo '<br>Product Affiliate link:&nbsp;<input type="text" style="display: block; border: transparent; max-width: 100%; margin-top: 10px;" value="' . esc_url( $referal_link ) . '"/>';
+		echo '<input type="text" style="display: block; border: transparent; width: 100%; margin-top: 10px;" value="Product affiliate link: ' . esc_url( $referal_link ) . '"/>';
 		
 	}
 	
