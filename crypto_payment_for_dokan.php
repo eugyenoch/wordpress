@@ -18,7 +18,7 @@ License: GPLv2
  */
 function register_new_withdraw_method( $methods ){
     $methods['custom']    = [
-        'title'     => __( 'Crypto Payment', 'dokan' ),
+        'title'     => __( 'Crypto Withdrawal', 'dokan' ),
         'callback'  => 'dokan_withdraw_method_custom'
     ];
 
