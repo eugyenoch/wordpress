@@ -11,13 +11,30 @@ add_action( 'init', 'register_event_ticket_product_type' );
 
 // Add the custom product type to the product data dropdown
 function add_event_ticket_product_type( $types ) {
-    $types['event_ticket'] = __( 'Event Ticket', 'woocommerce' );
+    // Include "virtual" and "downloadable" options
+    $types['event_ticket'] = array(
+        'label'       => __('Event Ticket', 'woocommerce'),
+        'description' => __('Sell tickets for events.', 'woocommerce'),
+        'supports'    => array(
+            'virtual',
+            'downloadable',
+        ),
+    );
     return $types;
 }
 add_filter( 'product_type_selector', 'add_event_ticket_product_type' );
 
 // Modify the product data tabs to include custom fields
 function add_event_ticket_product_data_tabs( $tabs ) {
+	// Include the "General" and "Inventory" tabs
+    $tabs['general'] = array(
+        'label'  => __('General', 'woocommerce'),
+        'target' => 'general_product_data',
+    );
+    $tabs['inventory'] = array(
+        'label'  => __('Inventory', 'woocommerce'),
+        'target' => 'inventory_product_data',
+    );
     $tabs['event_ticket'] = array(
         'label'  => __( 'Event Ticket', 'woocommerce' ),
         'target' => 'event_ticket_options',
