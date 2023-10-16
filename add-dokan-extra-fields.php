@@ -6,7 +6,7 @@ Description: Adds custom payment methods to Dokan dashboard
 Version: 1.0
 Author: Eugy Enoch
 Author URI: https://github.com/eugyenoch
-Textdomain: twentytwentythree
+Textdomain: kadence
 License: GPLv2
 */
 
@@ -15,7 +15,7 @@ add_action( 'dokan_new_product_after_product_tags','new_product_fields',10 );
 
 function new_product_fields(){ ?>
  <div class="dokan-form-group">
-        <label for="event_notice">Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity). For non-downloadable tickets, be sure select the "virtual" option, only. For downloadable tickets, select both the "virtual" and "downloadable" options.</label>
+        <label for="event_notice">Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for a single-date event, exhibition, cinema, appointment, and some other activity). For non-downloadable tickets, be sure select the "virtual" option, only. For downloadable tickets, select both the "virtual" and "downloadable" options.</label>
     </div>
     
      <div class="dokan-form-group">
@@ -91,7 +91,7 @@ function show_extra_fields_on_edit_page($post, $post_id){
     ?>
      <div class="dokan-form-group">
         <label for="event_notice">
-            <strong>Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity). For non-downloadable tickets, be sure select the "virtual" option, only. For downloadable tickets, select both the "virtual" and "downloadable" options.</strong>
+            <strong>Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for a single-date event, exhibition, cinema, appointment, and some other activity). For non-downloadable tickets, be sure select the "virtual" option, only. For downloadable tickets, select both the "virtual" and "downloadable" options.</strong>
         </label>
     </div>
 
