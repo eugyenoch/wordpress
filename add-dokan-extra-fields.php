@@ -15,7 +15,7 @@ add_action( 'dokan_new_product_after_product_tags','new_product_fields',10 );
 
 function new_product_fields(){ ?>
  <div class="dokan-form-group">
-        <label for="event_notice">Only fill out this optional section if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity) </label>
+        <label for="event_notice">Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity) </label>
     </div>
     
      <div class="dokan-form-group">
@@ -31,7 +31,7 @@ function new_product_fields(){ ?>
      </div>
 
      <div class="dokan-form-group">
-         <label for="event_actors" class="form-label"><?php esc_html_e( 'Event Actors', 'dokan-lite' ); ?></label>
+         <label for="event_actors" class="form-label"><?php esc_html_e( 'Event Actors, Performers, Speakers', 'dokan-lite' ); ?></label>
          <input type="text" class="dokan-form-control" name="event_actors" id="event_actors">
      </div>
 
@@ -91,7 +91,7 @@ function show_extra_fields_on_edit_page($post, $post_id){
     ?>
      <div class="dokan-form-group">
         <label for="event_notice">
-            <strong>Only fill out the Activity/Event section if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity) </strong>
+            <strong>Fill out Event date, Event time, Event actors, and Event location, only if you want to sell tickets (for an event, exhibition, cinema, appointment, and some other activity) </strong>
         </label>
     </div>
 
@@ -106,7 +106,7 @@ function show_extra_fields_on_edit_page($post, $post_id){
     </div>
 
     <div class="dokan-form-group">
-        <label for="event_actors" class="form-label"><?php esc_html_e( 'Event Actors', 'dokan-lite' ); ?></label>
+        <label for="event_actors" class="form-label"><?php esc_html_e( 'Event Actors, Performers, Speakers', 'dokan-lite' ); ?></label>
         <input type="text" class="dokan-form-control" name="event_actors" id="event_actors" value="<?php echo esc_attr( $event_actors ); ?>">
     </div>
 
