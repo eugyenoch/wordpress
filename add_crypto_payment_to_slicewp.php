@@ -1,3 +1,4 @@
+<?php
 function slicewp_custom_register_affiliate_fields_crypto_details( $fields ) {
 	
 	$fields[] = array(
@@ -38,3 +39,4 @@ function slicewp_custom_register_affiliate_fields_crypto_details( $fields ) {
 
 }
 add_filter( 'slicewp_register_affiliate_fields', 'slicewp_custom_register_affiliate_fields_crypto_details', 50 );
+?>
