@@ -1,3 +1,4 @@
+<?php
 /*
 *Original author: https://wordpress.org/support/users/iovamihai/
 */
@@ -13,3 +14,4 @@ function slicewp_custom_add_afflink() {
 	
 }
 add_action( 'woocommerce_after_add_to_cart_button', 'slicewp_custom_add_afflink', 99 );
+?>
