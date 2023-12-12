@@ -1,3 +1,4 @@
+<?php
 function slicewp_custom_register_affiliate_fields_bank_details( $fields ) {
 	
 	$fields[] = array(
@@ -64,3 +65,4 @@ function slicewp_custom_register_affiliate_fields_bank_details( $fields ) {
 
 }
 add_filter( 'slicewp_register_affiliate_fields', 'slicewp_custom_register_affiliate_fields_bank_details', 50 );
+?>
