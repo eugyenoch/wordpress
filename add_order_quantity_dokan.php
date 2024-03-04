@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Add order quantity and delivery dates 
+Plugin Name: Add order quantity and delivery dates to Dokan
 Plugin URI: https://iboora.com
 Description: Add minimum and maximum order quantity on Dokan, also included with the plugin is the delivery date option. Useful for importers, wholesalers, suppliers, manufacturers and dealers in bulk purchase
 Version: 1.1.0
