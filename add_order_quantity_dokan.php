@@ -17,12 +17,12 @@ function new_number_quantity_fields(){ ?>
         <label for="number_quantity_notice"><strong>Fill out the minimum and maximum order quantity for your product, if applicable(this section is intended for importers, manufacturers, wholesalers, suppliers and those with bulk purchase requirements).</strong></div>
 
      <div class="dokan-form-group">
-         <label for="number_quantity_minimum" class="form-label"><?php esc_html_e( 'Minimum Order Number', 'dokan-lite' ); ?></label>
+         <label for="number_quantity_minimum" class="form-label"><?php esc_html_e( 'Minimum Order', 'dokan-lite' ); ?></label>
          <input type="text" class="dokan-form-control" name="number_quantity_minimum" id="number_quantity_minimum">
      </div>
 
      <div class="dokan-form-group">
-         <label for="number_quantity_maximum" class="form-label"><?php esc_html_e( 'Maximum Order Number', 'dokan-lite' ); ?></label>
+         <label for="number_quantity_maximum" class="form-label"><?php esc_html_e( 'Maximum Order', 'dokan-lite' ); ?></label>
          <input type="text" class="dokan-form-control" name="number_quantity_maximum" id="number_quantity_maximum">
      </div>
 
@@ -74,12 +74,12 @@ function show_order_quantity_fields_on_edit_page($post, $post_id){
         <label for="number_quantity_notice"><strong>Edit the minimum and maximum order quantity for your product, if applicable(this section is intended for importers, manufacturers, wholesalers, suppliers and those with bulk purchase requirements).</strong></div>
 
      <div class="dokan-form-group">
-         <label for="number_quantity_minimum" class="form-label"><?php esc_html_e( 'Minimum Order Number', 'dokan-lite' ); ?></label>
+         <label for="number_quantity_minimum" class="form-label"><?php esc_html_e( 'Minimum Order', 'dokan-lite' ); ?></label>
          <input type="text" class="dokan-form-control" name="number_quantity_minimum" id="number_quantity_minimum">
      </div>
 
      <div class="dokan-form-group">
-         <label for="number_quantity_maximum" class="form-label"><?php esc_html_e( 'Maximum Order Number', 'dokan-lite' ); ?></label>
+         <label for="number_quantity_maximum" class="form-label"><?php esc_html_e( 'Maximum Order', 'dokan-lite' ); ?></label>
          <input type="text" class="dokan-form-control" name="number_quantity_maximum" id="number_quantity_maximum">
      </div>
 
