@@ -1,0 +1,19 @@
+{
+  "generator": "Code Snippets v3.6.4",
+  "date_created": "2024-04-21 17:39",
+  "snippets": [
+    {
+      "id": 83,
+      "name": "Add woocommerce attributes on Dokan",
+      "desc": "<p>This code will fetch all the product attributes from WooCommerce and display them in a multi-select dropdown field on the Dokan product add/edit form. Vendors can then select the attributes they want for their products.</p>",
+      "code": "/**\n * Fetch product attributes and their values, and display multi-select field on Dokan product add/edit form\n */\n\n/**\n * Add custom field to Dokan product add/edit form\n */\nadd_action( 'dokan_new_product_after_product_tags', 'add_custom_attribute_field', 10 );\nadd_action( 'dokan_product_edit_after_product_tags', 'add_custom_attribute_field', 10 );\n\nfunction add_custom_attribute_field() {\n    $product_attributes = get_product_attributes();\n\n    if ( ! empty( $product_attributes ) ) {\n        ?>\n        <div class=\"dokan-form-group\">\n            <label for=\"product_attributes\"><?php esc_html_e( 'Select Product Attributes', 'kadence' ); ?></label>\n            <select name=\"product_attributes[]\" id=\"product_attributes\" multiple=\"multiple\" class=\"dokan-form-control chosen_attributes\" style=\"height: 100px;\">\n                <?php\n                foreach ( $product_attributes as $attribute_name => $attribute_values ) {\n                    echo '<optgroup label=\"' . esc_attr( $attribute_name ) . '\">';\n                    foreach ( $attribute_values as $value_id => $value_name ) {\n                        echo '<option value=\"' . esc_attr( $attribute_name . '|' . $value_id ) . '\">' . esc_html( $value_name ) . '</option>';\n                    }\n                    echo '</optgroup>';\n                }\n                ?>\n            </select>\n        </div>\n        <?php\n    }\n}\n\n/**\n * Fetch product attributes and their values\n *\n * @return array $product_attributes\n */\nfunction get_product_attributes() {\n    $product_attributes = array();\n    $attribute_taxonomies = wc_get_attribute_taxonomies();\n\n    if ( ! empty( $attribute_taxonomies ) ) {\n        foreach ( $attribute_taxonomies as $attribute ) {\n            $attribute_name = wc_attribute_taxonomy_name( $attribute->attribute_name );\n            $attribute_terms = get_terms( $attribute_name, array( 'hide_empty' => false ) );\n\n            if ( ! empty( $attribute_terms ) ) {\n                $attribute_values = array();\n                foreach ( $attribute_terms as $term ) {\n                    $attribute_values[ $term->term_id ] = $term->name;\n                }\n                $product_attributes[ $attribute->attribute_label ] = $attribute_values;\n            }\n        }\n    }\n\n    return $product_attributes;\n}\n",
+      "tags": [
+        "woocommerce",
+        "dokan"
+      ],
+      "active": true,
+      "modified": "2024-04-21 17:37:52",
+      "revision": "13"
+    }
+  ]
+}
