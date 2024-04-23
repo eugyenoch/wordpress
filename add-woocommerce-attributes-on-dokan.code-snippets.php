@@ -10,23 +10,31 @@ add_action( 'dokan_new_product_after_product_tags', 'add_custom_attribute_field'
 add_action( 'dokan_product_edit_after_product_tags', 'add_custom_attribute_field', 10 );
 
 function add_custom_attribute_field() {
+    global $post;
     $product_attributes = get_product_attributes();
+    $selected_attributes = get_post_meta( $post->ID, 'product_attributes', true );
 
     if ( ! empty( $product_attributes ) ) {
         ?>
         <div class="dokan-form-group">
-            <label for="product_attributes"><?php esc_html_e( 'Select Product Attributes', 'kadence' ); ?></label>
+            <label for="product_attributes"><strong><?php esc_html_e( 'Select Product Attributes', 'kadence' ); ?></strong></label>
             <select name="product_attributes[]" id="product_attributes" multiple="multiple" class="dokan-form-control chosen_attributes" style="height: 100px;">
                 <?php
                 foreach ( $product_attributes as $attribute_name => $attribute_values ) {
                     echo '<optgroup label="' . esc_attr( $attribute_name ) . '">';
                     foreach ( $attribute_values as $value_id => $value_name ) {
-                        echo '<option value="' . esc_attr( $attribute_name . '|' . $value_name ) . '">' . esc_html( $value_name ) . '</option>';
+                        $selected = in_array( $attribute_name . '|' . $value_name, $selected_attributes ) ? 'selected="selected"' : '';
+                        echo '<option value="' . esc_attr( $attribute_name . '|' . $value_name ) . '" ' . $selected . '>' . esc_html( $value_name ) . '</option>';
                     }
                     echo '</optgroup>';
                 }
                 ?>
             </select>
+            <?php
+            if ( ! wp_is_mobile() ) {
+                echo "Hold down control key to select multiple attributes at once";
+            }
+            ?>
         </div>
         <?php
     }
