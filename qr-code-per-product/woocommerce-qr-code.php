@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce QR Code
  * Plugin URI: https://netserver.ng
- * Plugin Description: Automatically generate and display QR codes for WooCommerce products with customization and analytics.
+ * Description: Automatically generate and display QR codes for WooCommerce products with customization and analytics.
  * Version: 1.0
  * Author: Eugy Enoch
  * Author URI: https://github.com/eugyenoch
