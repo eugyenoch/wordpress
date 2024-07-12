@@ -1,10 +1,13 @@
 <?php
 /**
  * Plugin Name: WooCommerce QR Code
- * Description: Automatically generate and display QR codes for WooCommerce products with customization and analytics.
+ * Plugin URI: https://netserver.ng
+ * Plugin Description: Automatically generate and display QR codes for WooCommerce products with customization and analytics.
  * Version: 1.0
  * Author: Eugy Enoch
+ * Author URI: https://github.com/eugyenoch
  * Text Domain: kadence
+ * License: GPLv2
  */
 
 // Exit if accessed directly
