@@ -1,0 +1,104 @@
+/* General Styling for the Login Page */
+body.login {
+    background: #f7f9fc;
+    color: #444;
+}
+
+body.login div#login {
+    padding: 20px;
+    width: 320px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+/* Logo Customization */
+body.login h1 a {
+    background-image: url('path-to-your-logo.png');
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+/* Form Customization */
+body.login form {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.login form .input, body.login form input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+body.login form input[type="submit"] {
+    background: #0073aa;
+    border-color: #006799;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.login form input[type="submit"]:hover {
+    background: #005a8c;
+    border-color: #004a73;
+}
+
+/* Customizing Links */
+body.login #nav a, body.login #backtoblog a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+body.login #nav a:hover, body.login #backtoblog a:hover {
+    color: #005a8c;
+}
+
+/* Message Box Styling */
+body.login .message {
+    border-left: 4px solid #0073aa;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f7f9fc;
+}
+
+/* Error Message Styling */
+body.login .login .message, body.login .login #login_error {
+    border-left: 4px solid #d63638;
+    padding: 12px;
+    border-radius: 5px;
+    background: #fce8e8;
+    color: #d63638;
+}
+
+
+@media (max-width: 480px) {
+    body.login div#login {
+        width: 90%;
+        padding: 10px;
+    }
+
+    body.login form {
+        padding: 15px;
+    }
+
+    body.login form .input, body.login form input[type="text"], body.login form input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
